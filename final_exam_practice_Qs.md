@@ -1,4 +1,4 @@
-Question 1: Data Structures and Recursion
+# Question 1: Data Structures and Recursion
 Problem Statement: Implement a function that uses recursion to reverse a linked list.
 
 solution:
