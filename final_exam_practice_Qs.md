@@ -1,8 +1,9 @@
 # Question 1: Data Structures and Recursion
+
 Problem Statement: Implement a function that uses recursion to reverse a linked list.
 
-solution:
-
+Solution:
+```
 class ListNode:
     def __init__(self, value=0, next=None):
         self.value = value
@@ -15,11 +16,13 @@ def reverse_linked_list(head):
     head.next.next = head
     head.next = None
     return new_head
+```
 
 # Example usage
+```
 head = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
 reversed_head = reverse_linked_list(head)
-
+```
 
 Question 2: Sorting Algorithms - Mergesort and Quicksort
 Problem Statement: Implement both Mergesort and Quicksort algorithms. Compare their efficiencies on the same random list of numbers.
