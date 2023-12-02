@@ -1203,7 +1203,7 @@ arr = [64, 34, 25, 12, 22, 11, 90]
 optimized_insertion_sort(arr)
 print(arr)  # Outputs the sorted array
 ```
-Question 43: Data Structures - Stack Min Operation
+# Question 43: Data Structures - Stack Min Operation
 Problem Statement: Implement a stack that supports push, pop, and retrieving the minimum element in constant time.
 
 Solution:
