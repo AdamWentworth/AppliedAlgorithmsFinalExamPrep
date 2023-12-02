@@ -1037,7 +1037,7 @@ sll = SinglyLinkedList()
 sll.head = ListNode(1, ListNode(2, ListNode(3)))
 sll.delete_node(2)
 ```
-Question 36: Stacks - Balanced Parentheses
+# Question 36: Stacks - Balanced Parentheses
 Problem Statement: Write a function that uses a stack to check whether a string of parentheses is balanced.
 
 Solution:
@@ -1057,7 +1057,7 @@ Example usage
 print(is_balanced("(())"))   # Outputs True
 print(is_balanced("(()"))    # Outputs False
 ```
-Question 37: Queues - Generating Binary Numbers
+# Question 37: Queues - Generating Binary Numbers
 Problem Statement: Using a queue, generate binary numbers from 1 to n.
 
 Solution:
