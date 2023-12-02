@@ -18,19 +18,19 @@ def reverse_linked_list(head):
     return new_head
 ```
 
-# Example usage
+Example usage
 ```
 head = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
 reversed_head = reverse_linked_list(head)
 ```
 
-Question 2: Sorting Algorithms - Mergesort and Quicksort
+# Question 2: Sorting Algorithms - Mergesort and Quicksort
+
 Problem Statement: Implement both Mergesort and Quicksort algorithms. Compare their efficiencies on the same random list of numbers.
 
 Solution:
 
-python
-Copy code
+```
 import random
 
 def mergesort(arr):
@@ -71,20 +71,22 @@ def quicksort(arr):
     middle = [x for x in arr if x == pivot]
     right = [x for x in arr if x > pivot]
     return quicksort(left) + middle + quicksort(right)
-
-# Example usage
+```
+Example usage
+```
 arr = [random.randint(0, 100) for _ in range(100)]
 print("Original Array:", arr)
 print("Mergesort:", mergesort(arr.copy()))
 print("Quicksort:", quicksort(arr.copy()))
+```
 
-Question 3: Trees and Recursion
+# Question 3: Trees and Recursion
+
 Problem Statement: Write a function that uses recursion to calculate the height of a binary tree. The height of a tree is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 Solution:
 
-python
-Copy code
+```
 class TreeNode:
     def __init__(self, value=0, left=None, right=None):
         self.value = value
@@ -98,19 +100,18 @@ def tree_height(node):
         left_height = tree_height(node.left)
         right_height = tree_height(node.right)
         return max(left_height, right_height) + 1
-
-# Example usage
+```
+Example usage
+```
 root = TreeNode(1, TreeNode(2), TreeNode(3, TreeNode(4), TreeNode(5)))
 print(tree_height(root))  # Should return the height of the tree
+```
 
-
-Question 4: Benchmarking and Big O
+# Question 4: Benchmarking and Big O
 Problem Statement: Implement a function that compares the time complexity of two sorting algorithms: bubble sort and insertion sort. Use this to empirically demonstrate their Big O notation on lists of varying sizes.
 
 Solution:
-
-python
-Copy code
+```
 import time
 import random
 
@@ -141,15 +142,15 @@ for size in list_sizes:
     test_arr = [random.randint(0, 1000) for _ in range(size)]
     print(f"Size: {size}, Bubble Sort Time: {benchmark(bubble_sort, test_arr)}")
     print(f"Size: {size}, Insertion Sort Time: {benchmark(insertion_sort, test_arr)}")
+```
 
+# Question 5: Stacks, DFS, and Recursion
 
-Question 5: Stacks, DFS, and Recursion
 Problem Statement: Write a function that uses a stack (without recursion) to perform a depth-first search on a binary tree. The function should return the list of values in the order they were visited.
 
 Solution:
 
-python
-Copy code
+```
 class TreeNode:
     def __init__(self, value=0, left=None, right=None):
         self.value = value
@@ -168,18 +169,18 @@ def depth_first_search(root):
         if node.left:
             stack.append(node.left)
     return result
-
-# Example usage
+```
+Example usage
+```
 root = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3))
 print(depth_first_search(root))  # Should return [1, 2, 4, 5, 3]
-
-Question 6: Sorting and Asymptotics
+```
+# Question 6: Sorting and Asymptotics
 Problem Statement: Implement the selection sort algorithm in Python. Then analyze its time complexity in terms of Big O notation.
 
 Solution:
 
-python
-Copy code
+```
 def selection_sort(arr):
     for i in range(len(arr)):
         min_idx = i
@@ -189,21 +190,21 @@ def selection_sort(arr):
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
     return arr
-
-# Example usage
+```
+Example usage
+```
 arr = [64, 25, 12, 22, 11]
 sorted_arr = selection_sort(arr)
 print(sorted_arr)  # Sorted array
+```
+Time Complexity Analysis: O(n^2) - as there are two nested loops.
 
-# Time Complexity Analysis: O(n^2) - as there are two nested loops.
+# Question 7: Queues, BFS, and Trees
 
-Question 7: Queues, BFS, and Trees
 Problem Statement: Implement a function to perform a level-order traversal (breadth-first search) on a binary tree using a queue. The function should return a list of values in level-order.
 
 Solution:
-
-python
-Copy code
+```
 from collections import deque
 
 class TreeNode:
@@ -225,18 +226,18 @@ def level_order_traversal(root):
         if node.right:
             queue.append(node.right)
     return result
-
-# Example usage
+```
+Example usage
+```
 root = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3))
 print(level_order_traversal(root))  # Should return [1, 2, 3, 4, 5]
+```
+# Question 8: Data Structures - Stacks and Queues
 
-Question 8: Data Structures - Stacks and Queues
 Problem Statement: Implement a Python class that simulates a stack using two queues. The class should support push, pop, and top operations.
 
 Solution:
-
-python
-Copy code
+```
 from collections import deque
 
 class StackUsingQueues:
@@ -255,22 +256,24 @@ class StackUsingQueues:
 
     def top(self):
         return self.queue1[0]
-
-# Example usage
+```
+Example usage
+```
 stack = StackUsingQueues()
 stack.push(1)
 stack.push(2)
 print(stack.top())  # Returns 2
 stack.pop()
 print(stack.top())  # Returns 1
+```
 
-Question 9: Sorting - Quicksort
+# Question 9: Sorting - Quicksort
+
 Problem Statement: Modify the quicksort algorithm to sort a list of strings based on their length. Analyze its time complexity.
 
 Solution:
 
-python
-Copy code
+```
 def quicksort_strings(arr):
     if len(arr) <= 1:
         return arr
@@ -279,11 +282,12 @@ def quicksort_strings(arr):
     middle = [x for x in arr if len(x) == pivot]
     right = [x for x in arr if len(x) > pivot]
     return quicksort_strings(left) + middle + quicksort_strings(right)
-
-# Example usage
+```
+Example usage
+```
 arr = ["apple", "banana", "cherry", "date"]
 sorted_arr = quicksort_strings(arr)
 print(sorted_arr)  # Sorted array based on string length
-
-# Time Complexity Analysis:
-# The time complexity remains O(n log n) on average, but it can degrade to O
+```
+Time Complexity Analysis:
+The time complexity remains O(n log n) on average, but it can degrade to O worst case
