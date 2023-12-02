@@ -1477,7 +1477,7 @@ while current:
     current = current.next
 # Outputs: 1 2 3 4
 ```
-# Question 53: Sequential Word Search in a Generic Tree
+# Question 52: Sequential Word Search in a Generic Tree
 Problem Statement: Implement a function that checks if a given word can be formed by traversing the tree, using each node's letter sequentially. The function should return True if the word can be formed, and False otherwise. Each node in the tree can have an arbitrary number of children.
 
 Solution:
@@ -1515,7 +1515,7 @@ root.children[1].children = [TreeNode('E')]
 print(word_search(root, "AC"))  # Outputs True
 print(word_search(root, "AB"))  # Outputs False
 ```
-# Question 54: Checking for a Perfect Binary Tree
+# Question 53: Checking for a Perfect Binary Tree
 Problem Statement: Write a function that checks if a binary tree is a perfect binary tree. A perfect binary tree is a binary tree in which all interior nodes have exactly two children and all leaves have the same depth or same level.
 
 Solution:
