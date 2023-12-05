@@ -28,6 +28,12 @@ reversed_head = reverse_linked_list(head)
 
 Problem Statement: Implement both Mergesort and Quicksort algorithms. Compare their efficiencies on the same random list of numbers.
 
+Performance Analysis:
+
+Empirical Comparison: Compare the execution time of both algorithms on the same randomly generated list of numbers. This will provide an empirical basis for understanding their performance.
+
+Theoretical Analysis: Discuss the time complexities of Mergesort and Quicksort in both average and worst-case scenarios. This theoretical analysis will complement your empirical findings and provide a complete picture of the sorting algorithms' efficiencies.
+
 Solution:
 
 ```
@@ -74,11 +80,31 @@ def quicksort(arr):
 ```
 Example usage
 ```
+# Example usage
 arr = [random.randint(0, 100) for _ in range(100)]
 print("Original Array:", arr)
-print("Mergesort:", mergesort(arr.copy()))
-print("Quicksort:", quicksort(arr.copy()))
+
+start_time = time.time()
+mergesort(arr.copy())
+end_time = time.time()
+print("Mergesort Time:", end_time - start_time)
+
+start_time = time.time()
+quicksort(arr.copy())
+end_time = time.time()
+print("Quicksort Time:", end_time - start_time)
 ```
+Mergesort:
+- Average-Case Time Complexity: \(O(n \log n)\)
+- Worst-Case Time Complexity: \(O(n \log n)\)
+
+Mergesort consistently performs in \(O(n \log n)\) time, regardless of input data patterns, making it a reliable choice for sorting.
+
+Quicksort:
+- Average-Case Time Complexity: \(O(n \log n)\)
+- Worst-Case Time Complexity: \(O(n^2)\)
+
+Quicksort also has an average-case time complexity of \(O(n \log n)\) but can degrade to \(O(n^2)\) in the worst case. Proper pivot selection methods help mitigate this risk.
 
 # Question 3: Trees and Recursion
 
