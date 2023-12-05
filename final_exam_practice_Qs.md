@@ -405,6 +405,8 @@ Time Complexity Analysis: Insertion at the beginning is O(n) for a list and O(1)
 # Question 13: Trees and BFS
 Problem Statement: Implement a function that checks if a binary tree is a complete binary tree using breadth-first search (BFS).
 
+Description: A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as left as possible. In other words, if you were to number the nodes from left to right at each level, there should be no gaps until the last level, and any missing nodes in the last level should appear as left as possible. Your task is to implement a function that determines whether a given binary tree meets this completeness criterion using breadth-first search (BFS).
+
 Solution:
 ```
 from collections import deque
